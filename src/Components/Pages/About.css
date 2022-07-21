@@ -1,0 +1,22 @@
+.about-box {
+  background-color: #f0ebe3;
+  cursor: pointer;
+}
+.about-description {
+  color: black;
+}
+.about-num {
+  color: #ff8d29;
+}
+.about-box:hover {
+  transform: scale(1.15);
+  /* transform: rotate(360deg); */
+  background-color: #ff8d29;
+  transition: 300ms linear;
+}
+.about-box:hover .about-num {
+  color: #b20600;
+}
+.about-box:hover .about-description {
+  color: white;
+}
