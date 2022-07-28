@@ -14,11 +14,10 @@ const ActiveLink = ({ children, to, ...props }) => {
         <Link
             to={to}
             {...props}
-            className={`relative lol text-lg hover:text-[#143d59] ${match ? 'text-[#143d59]' : 'text-[#FF8D29]'}`}
+            className={`relative lol text-lg hover:text-[white] ${match ? 'text-[white]' : 'text-[#ee534f]'}`}
         >
             {children}
-            {match ? <div className="hidden md:block absolute left-0 rounded right-0 h-[2px] bg-[black] hi">
-
+            {match ? <div className="hidden md:block absolute left-0 rounded right-0 h-[2px] bg-[white] hi">
             </div> : <div className="low hidden md:block"></div>}
         </Link>
     );

@@ -30,7 +30,7 @@ import jwt from '../../Assets/jwt.png'
 import { AppContext } from '../../App';
 import SkillsBar from '../Utilities/SkillsBar';
 import Aos from 'aos';
-Aos.init()
+
 const Skills = () => {
     const { setNavOpen } = useContext(AppContext)
     useEffect(() => {
@@ -63,31 +63,31 @@ const Skills = () => {
             <div className="min-h-[calc(100vh-100px)] w-[60%] sm:w-[85%] mx-auto mt-14" ref={ref1}>
                 <div>
                     <motion.h1 className='mx-auto text-center
-                 text-5xl pb-3 font-bold my-4' animate={animation1}>My<span className="text-[#FF8D29]"> Skills</span></motion.h1>
+                text-5xl pb-3 font-bold my-4 text-white' animate={animation1}>My<span className="text-[#E84A5F]"> Skills</span></motion.h1>
                 </div>
                 <div className="flex flex-wrap justify-items-center justify-center gap-3 my-6">
-                    <button className={`btn ${category === 'all' ? 'bg-[#FF8D29] hover:bg-[#ebb789] border-0 text-white' : 'bg-[white] hover:bg-[#143d59] text-black '} 
+                    <button className={`btn ${category === 'all' ? 'bg-[#E84A5F] hover:bg-[#e84a5fbb] border-0 text-white' : 'bg-[white] hover:bg-[#143d59] text-black '} 
                             hover:text-white `} onClick={() => {
                             if (category !== 'all') {
                                 setCategory('all')
                                 setVisualizeSkills(x.sort((a, b) => 0.5 - Math.random()))
                             }
                         }}>All</button>
-                    <button className={`btn ${category === 'expert' ? 'bg-[#FF8D29] hover:bg-[#ebb789] border-0' : 'bg-[white] hover:bg-[#143d59]'} text-black  
+                    <button className={`btn ${category === 'expert' ? 'bg-[#E84A5F] hover:bg-[#e84a5fbb] border-0' : 'bg-[white] hover:bg-[#143d59]'} text-black  
                             hover:text-white `} onClick={() => {
                             if (category !== 'expert') {
                                 setCategory('expert')
                                 setVisualizeSkills(x.filter(x => x.category === 'expert').sort((a, b) => 0.5 - Math.random()))
                             }
                         }}>Expert</button>
-                    <button className={`btn ${category === 'comfortable' ? 'bg-[#FF8D29] hover:bg-[#ebb789] border-0' : 'bg-[white] hover:bg-[#143d59]'} text-black 
+                    <button className={`btn ${category === 'comfortable' ? 'bg-[#E84A5F] hover:bg-[#e84a5fbb] border-0' : 'bg-[white] hover:bg-[#143d59]'} text-black 
                             hover:text-white`} onClick={() => {
                             if (category !== 'comfortable') {
                                 setCategory('comfortable')
                                 setVisualizeSkills(x.filter(x => x.category === 'comfort').sort((a, b) => 0.5 - Math.random()))
                             }
                         }}>Comfortable</button>
-                    <button className={`btn ${category === 'tools' ? 'bg-[#FF8D29] hover:bg-[#ebb789] border-0' : 'bg-[white] hover:bg-[#143d59]'} text-black hover:bg-[#143d59] 
+                    <button className={`btn ${category === 'tools' ? 'bg-[#E84A5F] hover:bg-[#e84a5fbb] border-0' : 'bg-[white] hover:bg-[#143d59]'} text-black hover:bg-[#143d59] 
                             hover:text-white`} onClick={() => {
                             if (category !== 'tools') {
                                 setCategory('tools')
@@ -95,9 +95,9 @@ const Skills = () => {
                             }
                         }}>Tools</button>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 duration-500">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 duration-500 mb-8 auto-rows-max">
                     {visualizeSkills.map(skill => <div data-aos="fade-right">
-                        <div className="bg-[#f0ebe3] hover:scale-125 duration-300 hover:text-white cursor-pointer hover:bg-[#FF8D29] flex flex-col items-center py-7 rounded-xl">
+                        <div className="group shadow bg-[#f0ebe3] hover:scale-125 duration-300 hover:text-white cursor-pointer hover:bg-[#E84A5F] flex flex-col items-center py-7 rounded-xl">
                             <motion.img whileHover={{
                                 rotateY: 360, transition: {
                                     duration: 0.2

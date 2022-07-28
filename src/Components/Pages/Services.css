@@ -1,0 +1,147 @@
+/* .post {
+  position: relative;
+  cursor: pointer;
+}
+.post:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(59, 54, 54);
+  transform-origin: 0 top 0;
+  transform: scaleY(0);
+  transition: 0.5s ease-out;
+}
+.post:hover .post-title {
+  color: #ff8d29;
+}
+.post:hover .post-des {
+  color: white;
+}
+.post:hover:before {
+  transform: scaleY(1);
+}
+
+.post-des {
+  color: inherit;
+  position: relative;
+  transition: 0.5s ease-out;
+}
+.post-title {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.333;
+  transition: 0.5s ease-out;
+} */
+.post::before,
+.post-2::before,
+.post-3::before,
+.post-4::before,
+.post-5::before,
+.post-6::before {
+  content: '';
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 20px;
+  width: 0;
+  height: 0;
+  height: 20px;
+  border-radius: 50%;
+  transition: 0.6s linear;
+  background-color: #e84a5f;
+}
+
+.post,
+.post-2,
+.post-3,
+.post-4,
+.post-5,
+.post-6 {
+  transition: 600ms linear;
+  cursor: pointer;
+}
+
+.post:hover::before,
+.post-2:hover::before,
+.post-3:hover::before,
+.post-4:hover::before,
+.post-5:hover::before,
+.post-6:hover::before {
+  width: 310%;
+  height: 310%;
+}
+.post-title,
+.post-title2,
+.post-title3,
+.post-title4,
+.post-title5,
+.post-title6,
+.post-des,
+.post-des2,
+.post-des3,
+.post-des4,
+.post-des5,
+.post-des6 {
+  position: relative;
+}
+.post:hover .post-des {
+  color: white;
+}
+.post:hover .post-title {
+  color: white;
+}
+.post-des {
+  color: #181818;
+}
+.post-2:hover .post-des2 {
+  color: white;
+}
+.post-2:hover .post-title2 {
+  color: white;
+}
+.post-des2 {
+  color: #181818;
+}
+.post-3:hover .post-des3 {
+  color: white;
+}
+.post-3:hover .post-title3 {
+  color: white;
+}
+.post-des3 {
+  color: #181818;
+}
+
+.post-4:hover .post-des4 {
+  color: white;
+}
+.post-4:hover .post-title4 {
+  color: white;
+}
+.post-des4 {
+  color: #181818;
+}
+.post-5:hover .post-des5 {
+  color: white;
+}
+.post-5:hover .post-title5 {
+  color: white;
+}
+.post-des5 {
+  color: #181818;
+}
+.post-6:hover .post-des6 {
+  color: white;
+}
+.post-6:hover .post-title6 {
+  color: white;
+}
+.post-des6 {
+  color: #181818;
+}

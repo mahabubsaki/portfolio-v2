@@ -25,7 +25,7 @@ const SkillsBar = () => {
         <div className="container" ref={ref1}>
             <div className="overflow-hidden">
                 <motion.h1 className='mx-auto text-center
-                 text-5xl pb-3 font-bold my-4' animate={animation1}>Relatable<span className="text-[#FF8D29]"> Role</span></motion.h1>
+                 text-5xl pb-3 font-bold my-4 text-white' animate={animation1}>Relatable<span className="text-[#E84A5F]"> Role</span></motion.h1>
             </div>
 
             <div className="skill-box">

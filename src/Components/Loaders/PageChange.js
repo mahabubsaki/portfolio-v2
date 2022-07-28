@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { PropagateLoader } from 'react-spinners';
-import { MdOutlineDoneOutline } from 'react-icons/md'
+import { PuffLoader } from 'react-spinners';
 
 const PageChange = ({ route }) => {
     const [openLoader, setOpenLoader] = useState(false)
@@ -17,14 +16,14 @@ const PageChange = ({ route }) => {
 
     return (
         <div className="h-screen flex overflow-y-hidden relative">
-            <div className={`w-1/4 bg-[#dbad8d] h-full duration-[0.5s] -translate-y-[100%] ${openLoader && 'translate-y-[0%]'}`}></div>
-            <div className={`w-2/4 bg-[#dbad8d] h-full duration-[0.5s] translate-y-[100%] ${openLoader && 'translate-y-[0%]'}`}></div>
-            <div className={`w-1/4 bg-[#dbad8d] h-full duration-[0.5s] -translate-y-[100%] ${openLoader && 'translate-y-[0%]'}`}></div>
+            <div className={`w-1/4 bg-[#242425] h-full duration-[0.5s] -translate-y-[100%] ${openLoader && 'translate-y-[0%]'}`}></div>
+            <div className={`w-2/4 bg-[#242425] h-full duration-[0.5s] translate-y-[100%] ${openLoader && 'translate-y-[0%]'}`}></div>
+            <div className={`w-1/4 bg-[#242425] h-full duration-[0.5s] -translate-y-[100%] ${openLoader && 'translate-y-[0%]'}`}></div>
             {openLoader && <div className="absolute h-full w-full flex justify-center items-center">
                 <div>
-                    <p className="text-3xl text-center my-3">Hold! Going to <span className='text-[#FF8D29] font-bold'>{route.toUpperCase()}</span> Page</p>
+                    <p className="text-3xl text-center my-3 text-white">Hold! Going to <span className='text-[#ee534f] font-bold'>{route.toUpperCase()}</span> Page</p>
                     <div className="flex justify-center">
-                        <PropagateLoader loading={true} size={35} color={'#143d59'} />
+                        <PuffLoader loading={true} size={60} color={'#ffffff'} />
                     </div>
                 </div>
             </div>}

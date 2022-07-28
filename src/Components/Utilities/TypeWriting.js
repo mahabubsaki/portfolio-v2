@@ -39,10 +39,10 @@ class TypeWriters extends React.PureComponent {
             newText = fullTxt.substring(0, this.state.text.length + 1);
         }
 
-        let delta = 200 - Math.random() * 100;
+        let delta = 300;
 
         if (this.isDeleting) {
-            delta /= 2;
+            delta = 200;
         }
 
         if (!this.isDeleting && newText === fullTxt) {
@@ -51,7 +51,7 @@ class TypeWriters extends React.PureComponent {
         } else if (this.isDeleting && newText === "") {
             this.isDeleting = false;
             this.loopNum++;
-            delta = 500;
+            delta = 300;
         }
 
         this.setState({ text: newText });
