@@ -83,7 +83,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col items-center my-6">
                     <div>
-                        <a href="https://drive.google.com/uc?export=download&id=17UbFe8oUKq43scgSbSmPtmmYHR8Oo-bQ">
+                        <a href="https://drive.google.com/uc?export=download&id=1x6cE6v2AB3ijt20CHI7NWpE_N15l4ZM8">
                             <button data-aos="flip-right" className="flex gap-2 my-3 rounded-[30px] items-center btn bg-[#ee534f] hover:bg-[white] hover:text-black text-white
                             border-0"><span>Download Resume</span> <BsDownload /></button></a>
                     </div>
